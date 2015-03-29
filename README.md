@@ -1,3 +1,14 @@
+## Student's Notes
+
+Run project according to notes given by Udacity below.
+No additional websites/books consulted.
+
+In main.js:
+1) Reduced number of pizzas generated.
+2) Reduced number calculations in for loop for updatepositions.
+3) When resizing pizzas, placed elements in array and reduced number of calculations.
+4) See additional comments in main.js for changes made.
+
 ## Website Performance Optimization portfolio project
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
