@@ -518,6 +518,7 @@ function updatePositions() {
 //  Use getElementsByClassName
 //
   var items = document.getElementsByClassName('mover');
+  var nitems = items.length;
 //
 //  There are five diffent calculations needed.  So do calculations
 //  outside for loop
@@ -527,7 +528,7 @@ function updatePositions() {
   var phase2 = 100 * Math.sin((document.body.scrollTop / 1250) + (2 % 5));
   var phase3 = 100 * Math.sin((document.body.scrollTop / 1250) + (3 % 5));
   var phase4 = 100 * Math.sin((document.body.scrollTop / 1250) + (4 % 5));
-  for (var i = 0; i < items.length; i+=5) {
+  for (var i = 0; i < nitems; i+=5) {
     // Original statements:
     // var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
     // items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
