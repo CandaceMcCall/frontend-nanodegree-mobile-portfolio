@@ -451,19 +451,11 @@ var resizePizzas = function(size) {
   // Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
     //
-    // Get items in pizza container and place in array
-    //
-    var containerItems = document.getElementsByClassName('randomPizzaContainer');
-    //
     // dx, offsetWidth is same for all, so get first one (don't really like this hack)
     //
     var dx = determineDx(containerItems[0], size);
     var newwidth = (containerItems[0].offsetWidth + dx) + 'px';
-    //
-    //	Determine number of items so not calculated each time
-    //
-    var nitems = containerItems.length;
-    for (var i = 0; i < nitems; i++) {
+    for (var i = 0; i < nContainerItems; i++) {
       containerItems[i].style.width = newwidth;
     }
   }
@@ -495,6 +487,14 @@ console.log("Time to generate pizzas on load: " + timeToGenerate[0].duration + "
 // Iterator for number of times the pizzas in the background have scrolled.
 // Used by updatePositions() to decide when to log the average time per frame
 var frame = 0;
+//
+// Get items in pizza container and place in array
+//
+var containerItems = document.getElementsByClassName('randomPizzaContainer');
+//
+//	Determine number of items so not calculated each time
+//
+var nContainerItems = containerItems.length;
 
 // Logs the average amount of time per 10 frames needed to move the sliding background pizzas on scroll.
 function logAverageFrame(times) {   // times is the array of User Timing measurements from updatePositions()
